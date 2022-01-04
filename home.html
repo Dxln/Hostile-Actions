@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dae">
+    <title>Team 404</title>
+    
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="/home.css">
+    <link rel="icon" href="/photos/TDS.jpg">
+    <!-- bootstrap cdns -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <!-- Ion icons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+</head>
+<body>
+    <div class="wrapper">
+        <!-- navbar starts here-->
+        <nav>
+            <span id="brand">
+                  <a href="index.html"><img src="/pictures/HA-Black.png" alt=""></a>
+            </span>
+
+            <ul id="menu">
+                <li><a href="members.html"><ion-icon name="people"></ion-icon></a></li>
+                <li><a href="shop.html"><ion-icon name="pricetag"></ion-icon></a></li>
+                <li><a href="about.html"><ion-icon name="information"></ion-icon></a></li>
+                <li><a href="socials.html"><ion-icon name="share-social"></ion-icon></a></li>
+          </ul>
+
+            <div id="toggle">
+                  <div class="span">menu</div>
+            </div>
+
+      </nav>
+
+      <div id="resize">
+            <div class="close-btn">close</div>
+
+            <ul id="menu">
+                  <li><a href="members.html"><ion-icon name="people"></ion-icon></a></li>
+                  <li><a href="shop.html"><ion-icon name="pricetag"></ion-icon></a></li>
+                  <li><a href="about.html"><ion-icon name="information"></ion-icon></a></li>
+                  <li><a href="socials.html"><ion-icon name="share-social"></ion-icon></a></li>
+            </ul>
+      </div>
+    
+    
+    <!-- Navigation ends here --> 
+    
+    <!-- greensock cdn -->
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+    
+    // navigation starts here
+
+    $("#toggle").click(function() {
+          $(this).toggleClass('on');
+          $("#resize").toggleClass("active");
+    });
+
+    $("#resize ul li a").click(function() {
+          $(this).toggleClass('on');
+          $("#resize").toggleClass("active");
+    });
+
+    $(".close-btn").click(function() {
+          $(this).toggleClass('on');
+          $("#resize").toggleClass("active");
+    });
+
+    // navigation ends here
+
+    // nav animation
+
+    TweenMax.from("#brand", 1, {
+          delay: 0.4,
+          y: 10,
+          opacity: 0,
+          ease: Expo.easeInOut
+    })
+
+    TweenMax.staggerFrom("#menu li a", 1, {
+          delay: 0.4,
+          opacity: 0,
+          ease: Expo.easeInOut
+    }, 0.1);
+
+    // nav animation ends
+
+    new WOW().init();
+    </script>
+
+    
+</body>
+</html>

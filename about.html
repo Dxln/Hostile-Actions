@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global/global.css">
+    <link rel="stylesheet" href="/css/pages/about.css">
+    <link rel="stylesheet" href="/css/global/navbar.css">
+    <title>Hostile Actions Home</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="icons">
+            <div class="icon icon-1"></div>
+            <div class="icon icon-2"></div>
+            <div class="icon icon-3"></div>
+        </div>
+        <div class="logo logo-1"></div> 
+    </div>
+    
+    <div id="text-elements">
+        <div class="about header-1"><h1>Who are we?</h1></div>
+        <div class="about header-paragraph-1">
+            <p>We're an amateur gaming organization with a focus on making an impact within the esports and content scenes.<br> We here at Hostile Actions are thrilled to be a part of the esports adventure!<br> We are a family Because of this, anything is possible. </p>
+        </div>
+        <div class="about header-2"><h1>What will you see for the Hostile Actions esports scene?</h1></div>
+        <div class="about header-paragraph-2">
+            We plan to start small. <br> There is no need to rush into things that are unknown to us. <br> We will be taking account of all the different areas where gaming is impacted by esports. <br> We are here for those who want to succeed, practice, and compete at high levels. <br> We want to support you and your dreams, just like we want you to help our vision.</div>
+        </div>
+        <div class="about header-3"><h1>What will be Hostile Actions content creation?</h1></div>
+        <div class="about header-paragraph-3">
+            <p>To produce and develop quality content, we will be scouting different platforms (YouTube, Twitch, Mixer and more.) We will be looking for those who are wanting to make an impact, hard-working, and creative. <br> Hostile Actions will be working as a family to give the highest of quality, while still supporting local and smaller creators. <br> Our eyes and ears will be open.</p>
+        </div>
+        <div class="about header-4"><h1>What will you see from Hostile Actions clothing?</h1></div>
+        <div class="about header-paragraph-4">
+            We will be producing high end affordable streetwear clothing and accessories for everyone without losing the quality of  our product. <br> Bringing our best ideas forward to let the brand be an extension of ourselves, Friends, and our lifestyle. </div>
+        </div>
+
+
+
+
+    <div class="footer">
+        <div class="footer-text">
+            <ul>
+                <li><a href="#">about</a></li>
+                <li><a href="#">news</a></li>
+                <li><a href="#">esports</a></li>
+                <li><a href="#">content</a></li>
+                <li><a href="#">partners</a></li>
+                <li><a href="#">careers</a></li>
+                <li><a href="#">contact</a></li>
+                <li><a href="#">faq</a></li>
+                <li><a href="#">sizing</a></li>
+            </ul>
+        </div>
+    </div>
+        
+    <script>
+        const body = document.body,
+            scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
+            height = scrollWrap.getBoundingClientRect().height - 1,
+            speed = 0.04;
+
+        var offset = 0;
+
+        body.style.height = Math.floor(height) + "px";
+
+        function smoothScroll() {
+            offset += (window.pageYOffset - offset) * speed;
+
+            var scroll = "translateY(-" + offset + "px) translateZ(0)";
+            scrollWrap.style.transform = scroll;
+
+            callScroll = requestAnimationFrame(smoothScroll);
+        }
+
+        smoothScroll();
+    </script>
+
+</body>
+</html>
